@@ -87,7 +87,7 @@ def notify(title, message):
 	"""
 	if UNAME == 'Darwin':
 		# Use growl on a mac
-		cmd = ['growlnotify', '-m', message, '-t', title]
+		cmd = ['growlnotify', '-m', message, '-t', title, '-s']
 	else:
 		# Otherwise default to notify-send
 		cmd = ['notify-send', title, message]
